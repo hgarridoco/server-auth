@@ -92,17 +92,17 @@ class ResUsers(models.Model):
         company_id = self.company_id
         message = []
         if company_id.password_lower:
-            message.append('\n* ' + 'Lowercase letter (At least ' + str(
-                company_id.password_lower) + ' character)')
+            message.append('Letra minúscula (al menos ' + str(
+                company_id.password_lower) + ' ccarácterar)')
         if company_id.password_upper:
-            message.append('\n* ' + 'Uppercase letter (At least ' + str(
-                company_id.password_upper) + ' character)')
+            message.append('Letra mayúscula (al menos ' + str(
+                company_id.password_upper) + ' carácter)')
         if company_id.password_numeric:
-            message.append('\n* ' + 'Numeric digit (At least ' + str(
-                company_id.password_numeric) + ' character)')
+            message.append('Número (al menos ' + str(
+                company_id.password_numeric) + ' carácter)')
         if company_id.password_special:
-            message.append('\n* ' + 'Special character (At least ' + str(
-                company_id.password_special) + ' character)')
+            message.append('Carácter especial (al menos ' + str(
+                company_id.password_special) + ' carácter)')
         if message:
             message = [_('Must contain the following:')] + message
         if company_id.password_length:
